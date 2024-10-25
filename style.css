@@ -1,0 +1,463 @@
+:root{
+    --dark: #212529;
+    --brand: #4357d4;
+    --brand_light: #6970dd;
+    --brand_rgb:78,87,212;
+    --body:#727272;
+    --box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+    --transition: all 0.5s ease;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1.7;
+    color: var(--body);
+}
+
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6{
+    font-weight: 600;
+    color: var(--dark);
+}
+
+a{
+    text-decoration: none;
+    color: var(--brand);
+    transition: var(--transition);
+}
+
+a:hover{
+    color: var(--brand_light);
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.section-padding{
+    padding-top: 140px;
+    padding-bottom: 50px;
+  
+}
+
+.theme-shadow{
+    box-shadow: var(--box-shadow);
+}
+/* ....navabr... */
+
+.navbar
+{
+box-shadow: var(--box-shadow);
+}
+
+.navbar-nav .nav-link{
+    font-weight: 500;
+    color: var(--dark);
+}
+
+.navbar-nav .nav-link:hover{
+    color: var(--brand);
+}
+
+
+/* ...button... */
+
+.btn{
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 24px;
+}
+
+.btn-brand{
+background-color: var(--brand);
+color: white;
+border-color: var(--brand);
+
+}
+
+.btn-brand:hover{
+    background-color: var(--brand_light);
+    border-color: var(--brand_light);
+    color: white;
+}
+
+
+/* ....hero.... */
+#hero {
+        background: linear-gradient(rgba(var(--brand_rgb),0.507), rgba(0,0,0,0.437)), url(images/hero.avif);
+        background-position: center;
+        background-size: cover;
+    }
+       
+/* ....section-title...... */
+
+.section-title{
+    margin-bottom: 60px;
+}
+
+.section-title .line{
+    width: 130px;
+    height: 4px;
+    background-color: var(--brand);
+    margin: 16px auto 24px auto;
+}
+.section-title p{
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* ....icons...... */
+
+.iconbox{
+
+    width: 60px;
+    height: 60px;
+    display: inline-flex;    
+    align-items: center;
+    justify-content: center;
+    background: rgba(var(--brand_rgb), 0.2);
+    color: var(--brand);
+    font-size: 30px;
+    border-radius: 10px;
+    flex: none;
+}
+
+
+
+ /* ........services....... */
+
+
+.row-services{
+    width: 80%;
+    
+}
+
+.service{
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.service::after{
+content: "";
+width: 1px;
+height: 1px;
+background: rgba(var(--brand_rgb),0.2);
+position: absolute;
+bottom: 0;
+right: 0;
+transition: var(--transition);
+}
+
+
+.service:hover::after{
+width: 100%;
+height: 100%;
+background: var(--brand);
+z-index: -1;
+}
+
+.service:hover h5,
+
+.service:hover p{
+    color: white;
+}
+
+.service:hover .iconbox{
+    background-color: rgba(255,255,255,0.2);
+    color: white;
+}
+
+/* ...........counter....... */
+
+#counter{
+    background: linear-gradient(rgba(var(--brand_rgb),0.8) , rgba(var(--brand_rgb),0.8)),url(images/counter.jpg);
+}
+
+
+
+/* .......................testimonials........................ */
+.review-person small{
+font-weight: 600;
+text-transform: uppercase;
+color: var(--brand);
+}
+.review-head{
+    position: relative;
+    border-radius: 15px;
+ 
+}
+
+.review-head:hover{
+    transform: translateY(-7px) ;
+    transition: var(--transition);
+    
+}
+.review-head::after{
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    bottom: -14px;
+    transform:rotate(45deg) ;
+    background-color: white;
+}
+
+
+
+
+/* .......card.......... */
+
+/* Card container */
+/* Card styling */
+.my-modern-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    margin: 0 25px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.my-modern-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Card image styling */
+.my-modern-card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    object-fit: cover;
+}
+
+/* Button styling */
+.btn-brand {
+    background-color: var(--brand);
+    color: white;
+    border-radius: 30px;
+    padding: 10px 20px;
+    transition: background-color 0.3s ease;
+}
+.btn-light{
+    border-radius: 30px;
+}
+
+.btn-brand:hover {
+    background-color: var(--brand_light);
+    color: white;
+}
+
+/* .......footer..... */
+
+footer {
+    background-color: #2c3e50; /* Darker background */
+    color: #ecf0f1; /* Light text color */
+    padding: 40px 20px; /* More padding */
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between columns */
+    flex-wrap: wrap;
+    max-width: 1200px; /* Maximum width for the footer */
+    margin: auto; /* Center the footer */
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 250px; /* Minimum width for columns */
+    margin: 20px; /* Margin for spacing */
+    text-align: center; /* Center text in columns */
+}
+
+.footer-logo {
+    width: 400px; /* Adjust logo size */
+    height: 50px;
+    margin-bottom: 20px; /* Space below logo */
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center; /* Center social icons */
+    margin-top: 15px;
+    /* Space above social icons */
+}
+
+.social-icons a {
+    margin: 0 10px;
+    color: white;
+    font-size: 25px; /* Space between icons */
+}
+
+.social-icons a img {
+    width: 30px; /* Adjust icon size */
+    transition: transform 0.3s; /* Transition effect for hover */
+}
+
+.social-icons a:hover img {
+    transform: scale(1.1); /* Scale up on hover */
+}
+
+h3 {
+    margin-bottom: 15px; /* Space below headings */
+    font-size: 1.5rem; /* Increase font size */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0; /* Space between list items */
+}
+
+ul li a {
+    color: #ecf0f1; /* Light color for links */
+    text-decoration: none;
+    transition: color 0.3s; /* Transition effect for hover */
+}
+
+ul li a:hover {
+    color: #3498db; /* Color change on hover */
+}
+
+footer p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+footer img {
+    vertical-align: middle; /* Align images vertically with text */
+    width: 18px; /* Adjust icon size */
+    margin-right: 8px; /* Space between icon and text */
+}
+.line {
+    width: 25%; /* Width of the line */
+    height: 4px; /* Thickness of the line */
+    background-color: var(--brand);
+    margin: 10px auto;
+    border-radius: 10px; /* Center the line with space above and below */
+}
+
+
+/* ....faq.... */
+
+.faq-section {
+    background-color: #f9f9f9; /* Light background */
+    padding: 50px 0;
+  text-align: center;
+}
+
+.accordion {
+    max-width: 600px; /* Limit width of the accordion */
+    margin: 0 auto; /* Center the accordion */
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+    transition: var(--transition); 
+}
+
+.accordion-button {
+    background-color: var(--brand);
+    color: white;
+    padding: 15px;
+    border: none;
+    text-align: left;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Transition for hover effect */
+}
+
+.accordion-button:hover {
+    background-color: var(--brand_light); /* Change background on hover */
+}
+
+.accordion-body {
+    display: none; /* Initially hide the body */
+    background-color: white;
+    color: var(--dark);
+    padding: 15px; /* Padding for content */
+    border: 1px solid var(--brand); /* Border for content */
+    border-radius: 5px; /* Rounded corners */
+    transition: var(--transition);
+}
+
+
+
+
+/* ......contact us ..... */
+
+/* Contact Form Styles */
+#contact {
+    background-color: #f1f4f8; 
+    padding: 80px 20px; 
+    text-align: center; 
+}
+
+.modern-form {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 12px; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.modern-form:hover {
+    box-shadow: 0 15px 30px rgba(205, 205, 205, 0.15); 
+}
+
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    background: #f9f9f9; 
+    font-size: 1rem;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--brand_light); 
+    background-color: white; 
+}
+
+.form-group textarea {
+    resize: none;
+}
+
+.modern-btn {
+    padding: 12px 35px;
+    border-radius: 25px; 
+    background-color: var(--brand);
+    color: white;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.modern-btn:hover {
+    background-color: var(--brand_light);
+   
+}
+
+.form-message {
+    margin-top: 20px;
+    color:var(--brand); /* Green success message */
+    font-weight: bold;
+    /* display: none;  */
+}
